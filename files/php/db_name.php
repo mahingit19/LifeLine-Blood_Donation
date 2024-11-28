@@ -1,0 +1,5 @@
+<?php
+
+$dbname = "llbd";
+
+?>
