@@ -108,7 +108,6 @@
                         <option disabled selected>Gender</option>
                         <option>Male</option>
                         <option>Female</option>
-                        <option>Transgender</option>
                         <option>Not to prefer</option>
                     </select>
                 </div>
