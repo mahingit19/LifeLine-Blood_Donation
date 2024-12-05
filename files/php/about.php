@@ -145,7 +145,7 @@
                         <!-- Team Member Card Nabil Khan-->
                         <div class="bg-white shadow-lg rounded-lg overflow-hidden team-card">
                             <div class="flex justify-center mt-4">
-                                <img src="files/image/office-man.png" alt="Team Member"
+                                <img src="files/image/nabil.jpg" alt="Team Member"
                                     class="w-44 h-44 rounded-full team-image object-cover border-4 border-gray-200">
                             </div>
                             <div class="p-4 text-center">
@@ -170,7 +170,7 @@
                         <!-- Team Member Card Sakib-->
                         <div class="bg-white shadow-lg rounded-lg overflow-hidden team-card">
                             <div class="flex justify-center mt-4">
-                                <img src="files/image/office-man.png" alt="Team Member"
+                                <img src="files/image/shakib.jpg" alt="Team Member"
                                     class="w-44 h-44 rounded-full team-image object-cover border-4 border-gray-200">
                             </div>
                             <div class="p-4 text-center">

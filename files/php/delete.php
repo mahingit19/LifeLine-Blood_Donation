@@ -3,6 +3,9 @@
 include "db_connect.php";
 include "db_select.php";
 
+if(isset($_POST["page_id"])){
+    $page = $_POST["page_id"];
+}
 
 if(isset($_POST["delete_id"])){
     $delete_id = $_POST["delete_id"];
@@ -11,13 +14,8 @@ if(isset($_POST["delete_id"])){
                         WHERE donor_id = '$delete_id'
                         ";
 }
-// if(isset($_POST["approve_all"])){
-//     $delete_sql = "UPDATE $dbname"."_donor_list
-//                         SET donor_status = 'allowed'
-//                         ";
-// }
 
 mysqli_query($connect,$delete_sql);
 
-header("Location:admin-panel.php?page=admin-donor-list");
+header("Location:admin-panel.php?page=$page");
 ?>

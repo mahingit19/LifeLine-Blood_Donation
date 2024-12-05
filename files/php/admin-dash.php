@@ -64,19 +64,19 @@
                                 class="bg-white rounded-lg p-4 flex justify-between items-center shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 hover:bg-blue-50">
                                 <div>
                                     <h1 class="text-lg font-semibold">Your Profile</h1>
-                                    <p class="text-[#1E3A8A] text-3xl font-semibold mt-2">$donation_num_rows</p>
+                                    <p class="text-[#1E3A8A] text-3xl font-semibold mt-2">Check</p>
                                 </div>
                                 <div>
                                     <img src="../image/office-man.png" alt="user_icon" class="w-14 h-12">
                                 </div>
                             </div>
                         </a>
-                        <a href="user-list.html">
+                        <a href="?page=admin-donation-list">
                             <div
                                 class="bg-white rounded-lg p-4 flex justify-between items-center shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 hover:bg-blue-50">
                                 <div>
-                                    <h1 class="text-lg font-semibold">Total Donations</h1>
-                                    <p class="text-[#1E3A8A] text-3xl font-semibold mt-2">$donation_num_rows</p>
+                                    <h1 class="text-lg font-semibold">Your Donations</h1>
+                                    <p class="text-[#1E3A8A] text-3xl font-semibold mt-2">$session_donation_num_rows</p>
                                 </div>
                                 <div>
                                     <img src="../image/office-man.png" alt="user_icon" class="w-14 h-12">

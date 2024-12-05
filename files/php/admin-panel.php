@@ -60,7 +60,7 @@ $page = 'admin-dash';
         if ($page=='admin-approve' && $user_type=='user'){
             include "admin-approve.php"; 
         }
-        if ($page=='admin-donation-list' && $user_type=='user'){
+        if ($page=='admin-donation-list' && ($user_type=='user' || $user_type=='donor')){
             include "admin-donation-list.php"; 
         }
         if ($page=='admin-user-list' && $user_type=='user'){

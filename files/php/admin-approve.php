@@ -45,9 +45,13 @@
                                                 </button>
                                     </form>
                                     </td>
-                                    <td class="p-3 text-sm md:text-base"><a href="#" class="text-red-600 hover:underline">
-                                                    <i class="fa-solid fa-xmark text-2xl"></i>
-                                                </a></td>
+                                    <td class=" text-sm md:text-base">
+                                    <form action="delete.php" method="post">
+                                                <input type="hidden" name="delete_id" value="$approval_donor_array[donor_id]" >
+                                                <input type="hidden" name="page_id" value="$page" >
+                                                <button onclick="return confirm('Are you sure want to delete $approval_donor_array[donor_name]?')" class="text-red-600 hover:underline"><i class="fa-solid fa-xmark text-2xl"></i></button>
+                                            </form>
+                                    </td>
                                 </tr>
                                 EOT;
                             }

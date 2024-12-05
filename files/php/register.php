@@ -29,12 +29,12 @@
 
             <form class="mt-8 space-y-5" action="files/php/submit.php" method="post" enctype="multipart/form-data">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm md:text-base">
-                    <input type="text" placeholder="First Name" class="px-4 py-3 border w-full rounded-md outline-none" name="fname">
-                    <input type="text" placeholder="Last Name" class="px-4 py-3 border w-full rounded-md outline-none" name="lname">
+                    <input type="text" placeholder="First Name *" class="px-4 py-3 border w-full rounded-md outline-none" name="fname" required>
+                    <input type="text" placeholder="Last Name *" class="px-4 py-3 border w-full rounded-md outline-none" name="lname" required>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm md:text-base">
-                    <select class="select w-full rounded-md outline-none" name="blood">
-                        <option disabled selected>Blood Group</option>
+                    <select class="select w-full rounded-md outline-none" name="blood" required>
+                        <option value="" disabled selected>Blood Group *</option>
                         <option>A+</option>
                         <option>A-</option>
                         <option>B+</option>
@@ -44,8 +44,8 @@
                         <option>AB+</option>
                         <option>Ab-</option>
                     </select>
-                    <select class="select w-full rounded-md outline-none" name="location">
-                        <option disabled selected>Location</option>
+                    <select class="select w-full rounded-md outline-none" name="location" required>
+                        <option value="" disabled selected>Location *</option>
                         <option>Dhaka</option>
                         <option>Faridpur</option>
                         <option>Gazipur</option>
@@ -113,8 +113,8 @@
                     </select>
                 </div>
                 <div class="text-sm md:text-base">
-                    <select class="select w-full rounded-md outline-none" name="gender">
-                        <option disabled selected>Gender</option>
+                    <select class="select w-full rounded-md outline-none" name="gender" required>
+                        <option value="" disabled selected>Gender *</option>
                         <option>Male</option>
                         <option>Female</option>
                         <option>Transgender</option>
@@ -122,20 +122,20 @@
                     </select>
                 </div>
                 <div class="text-sm md:text-base">
-                    <input type="email" placeholder="Email" class="px-4 py-3 border w-full rounded-md outline-none" name="email">
+                    <input type="tel" placeholder="Phone *" class="px-4 py-3 border w-full rounded-md outline-none" name="phone" required>
                 </div>
                 <div class="text-sm md:text-base">
-                    <input type="tel" placeholder="Phone" class="px-4 py-3 border w-full rounded-md outline-none" name="phone">
+                    <input type="email" placeholder="Email *" class="px-4 py-3 border w-full rounded-md outline-none" name="email" required>
                 </div>
                 <div class="text-sm md:text-base">
-                    <input type="password" placeholder="Password" class="px-4 py-3 border w-full rounded-md outline-none" name="pass">
+                    <input type="password" placeholder="Password *" class="px-4 py-3 border w-full rounded-md outline-none" name="pass" required>
                 </div>
                 <div>
                     <input type="file" class="file-input file-input-bordered w-full " name="photo" />
                 </div>
                 <div class="flex items-center justify-center md:justify-start gap-2 opacity-80 text-sm md:text-base">
-                    <input type="checkbox" class="checkbox checkbox-success" />
-                    <p>I accept the <span class="text-green-500">Terms of Use</span> & <span class="text-green-500">Privacy Policy</span></p>
+                    <input type="checkbox" class="checkbox checkbox-success" required/>
+                    <p>I accept the <span class="text-green-500">Terms of Use</span> & <span class="text-green-500">Privacy Policy</span> *</p>
                 </div>
                 <input type="hidden" name="status" value="pending">
                 <input type="hidden" name="date" value="<?php

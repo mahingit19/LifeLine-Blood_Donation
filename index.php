@@ -111,6 +111,5 @@ session_start();
     ?>
 
     <?php include "files/php/footer.php"; ?>
-    <h1>htmlspecialchars_decode</h1>
 </body>
 

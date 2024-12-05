@@ -28,11 +28,21 @@ if (isset($_GET['id'])){
 $donor_table = $dbname."_donor_list";
 $donation_table = $dbname."_donation_list";
 
-$donation_sql = "SELECT $donation_table.donation_id, $donation_table.donation_date, $donor_table.donor_id,  $donor_table.donor_name
+if ($user_type == "user"){
+    $donation_sql = "SELECT $donation_table.donation_id, $donation_table.donation_date, $donor_table.donor_id,  $donor_table.donor_name
                 FROM $donation_table
                 INNER JOIN $donor_table ON $donation_table.donor_id=$donor_table.donor_id;";
-$donation_query = mysqli_query($connect,$donation_sql);
-$donation_num_rows = mysqli_num_rows($donation_query);
+    $donation_query = mysqli_query($connect,$donation_sql);
+    $donation_num_rows = mysqli_num_rows($donation_query);
+}
+
+if ($user_type == "donor"){
+    $session_donation_sql = "SELECT $donation_table.donation_id, $donation_table.donation_date, $donor_table.donor_id,  $donor_table.donor_name
+                FROM $donation_table
+                INNER JOIN $donor_table ON $donation_table.donor_id=$donor_table.donor_id  WHERE $donation_table.donor_id='$session_array[donor_id]' ORDER BY $donation_table.donation_id DESC;";
+    $session_donation_query = mysqli_query($connect,$session_donation_sql);
+    $session_donation_num_rows = mysqli_num_rows($session_donation_query);
+}
 
 $user_sql = "SELECT * FROM $dbname"."_user_list";
 $user_query = mysqli_query($connect,$user_sql);

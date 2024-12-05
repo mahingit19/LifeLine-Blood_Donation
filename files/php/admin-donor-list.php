@@ -39,12 +39,12 @@
                                     <td class="p-3 text-sm md:text-base">$donor_array[donor_phone]</td>
                                     <td class="p-3 text-sm md:text-base">$donor_array[donor_date]</td>
                                     <td class=" text-sm md:text-base"><a href="?page=admin-update-form&id=$donor_array[donor_id]" class="text-blue-500 hover:underline"><i class="fa-regular fa-pen-to-square hover:bg-gray-300 p-2 rounded-full w-10 h-10 flex justify-center items-center"></i></a></td>
-
                                     <td class=" text-sm md:text-base">
                                     <form action="delete.php" method="post">
-                                    <input type="hidden" name="delete_id" value="$donor_array[donor_id]" >
-                                    <button type="submit" class="text-red-500"><i class="fa-solid fa-trash-can hover:bg-gray-300 p-2 rounded-full w-10 h-10 flex justify-center items-center"></i></button>
-                                    </form>
+                                                <input type="hidden" name="delete_id" value="$donor_array[donor_id]" >
+                                                <input type="hidden" name="page_id" value="$page" >
+                                                <button onclick="return confirm('Are you sure want to delete $donor_array[donor_name]?')" class="text-red-600 hover:underline"><i class="fa-solid fa-trash-can hover:bg-gray-300 p-2 rounded-full w-10 h-10 flex justify-center items-center"></i></button>
+                                            </form>
                                     </td>
                                 </tr>
                                 EOT;
@@ -52,3 +52,18 @@
                             }
                     ?>
                 </tbody>
+                </table>
+                <!-- Delete Confirmation Popup -->
+                
+                            <!-- delete pop up js function -->
+    <script>
+        // Show delete popup
+        function showPopup() {
+            document.getElementById('deletePopup').classList.remove('hidden');
+        }
+
+        // Cancel delete
+        function cancelDelete() {
+            document.getElementById('deletePopup').classList.add('hidden');
+        }
+    </script>

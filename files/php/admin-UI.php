@@ -93,6 +93,9 @@
                                 <hr class="opacity-30">
                                 <a href="?page=admin-profile" class="block py-2 px-4 rounded hover:bg-blue-700">Profile</a>
                                 <hr class="opacity-30">
+                                <a href="?page=admin-donation-list" class="block py-2 px-4 rounded hover:bg-blue-700">Donation lists (table of donor
+                                    donate dates)</a>
+                                <hr class="opacity-30">
                                 EOT;
                             }
                             if($user_type == "user"){
@@ -103,9 +106,6 @@
                                 <hr class="opacity-30">
                                 <a href="?page=admin-approve" class="block py-2 px-4 rounded hover:bg-blue-700">Approvals (Table of pending
                                     donors)</a>
-                                <hr class="opacity-30">
-                                <a href="?page=admin-donation-list" class="block py-2 px-4 rounded hover:bg-blue-700">Donation lists (table of donor
-                                    donate dates)</a>
                                 <hr class="opacity-30">
                                 <a href="?page=admin-user-list" class="block py-2 px-4 rounded hover:bg-blue-700">User List (table of account
                                     users)</a>

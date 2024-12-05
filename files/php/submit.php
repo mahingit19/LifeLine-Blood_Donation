@@ -1,4 +1,25 @@
 <?php
+if (isset($_POST["donation"])){
+  include "db_connect.php";
+  include "db_select.php";
+
+  $donor_id = $_POST["donor_id"];
+  $donation_date = $_POST["donation_date"];
+
+  $sql = "INSERT INTO $dbname"."_donation_list 
+            VALUES(
+            '',
+            '$donation_date',
+            '$donor_id'
+            )";
+  mysqli_query($connect,$sql);
+  header("Location: admin-panel.php?page=admin-donation-list&submit=success");
+  exit;
+}
+?>
+
+
+<?php
 //photo upload
 
 
