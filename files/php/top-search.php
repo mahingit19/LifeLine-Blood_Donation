@@ -9,7 +9,14 @@
                     <div>
                         <label class="font-medium">Blood Group</label><br>
                         <select class="select select-bordered w-full mt-1 font-semibold text-sm lg:text-base" name="blood">
-                            <option disabled selected>Select</option>
+                            <?php
+                            if ($blood != ''){
+                                echo "<option selected>$blood</option>";
+                            }
+                            else{
+                                echo "<option disabled selected>Select</option>";
+                            }
+                            ?>
                             <option>A+</option>
                             <option>A-</option>
                             <option>B+</option>
@@ -23,7 +30,14 @@
                     <div>
                         <label class="font-medium">District</label><br>
                         <select class="select select-bordered w-full mt-1 font-semibold text-sm lg:text-base" name="location">
-                            <option disabled selected>Select</option>
+                        <?php
+                            if ($location != ''){
+                                echo "<option selected>$location</option>";
+                            }
+                            else{
+                                echo "<option disabled selected>Select</option>";
+                            }
+                            ?>
                             <option>Dhaka</option>
                             <option>Faridpur</option>
                             <option>Gazipur</option>
@@ -99,7 +113,14 @@
                     <div>
                         <label class="font-medium">Donor Type</label><br>
                         <select class="select select-bordered w-full mt-1 font-semibold text-sm lg:text-base" name="type">
-                            <option disabled selected>Select</option>
+                        <?php
+                            if ($type != ''){
+                                echo "<option selected>$type</option>";
+                            }
+                            else{
+                                echo "<option disabled selected>Select</option>";
+                            }
+                            ?>
                             <option>All</option>
                             <option>Eligible</option>
                         </select>

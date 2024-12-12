@@ -23,8 +23,14 @@ if(isset($_POST["submit"])){
     if (isset($_POST["type"])){
         $type = $_POST["type"];
     }
+
+    if ($blood != '' && $location != ''){
+        $sql = "SELECT donor_name,donor_blood,donor_location,donor_phone,donor_photo FROM $dbname"."_donor_list WHERE donor_status='allowed' AND donor_blood='$blood' AND donor_location='$location' ORDER BY donor_name ASC";
+    }
+    else{
+        $sql = "SELECT donor_name,donor_blood,donor_location,donor_phone,donor_photo FROM $dbname"."_donor_list WHERE donor_status='allowed' AND (donor_blood='$blood' OR donor_location='$location') ORDER BY donor_name ASC";
+    }
     
-    $sql = "SELECT donor_name,donor_blood,donor_location,donor_phone,donor_photo FROM $dbname"."_donor_list WHERE donor_status='allowed' AND (donor_blood='$blood' OR donor_location='$location')";
     $query = mysqli_query($connect,$sql);
 
     $num_rows = mysqli_num_rows($query);
