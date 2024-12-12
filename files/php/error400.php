@@ -1,0 +1,3 @@
+<h1 style="text-align: center; font-size: 72px; padding: 100px;">
+    error: 400 ! Bad request...
+</h1>

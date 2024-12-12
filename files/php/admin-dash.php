@@ -13,7 +13,7 @@
                                     <p class="text-[#1E3A8A] text-3xl font-semibold mt-2">$donor_num_rows</p>
                                 </div>
                                 <div>
-                                    <img src="../image/office-man.png" alt="user_icon" class="w-14 h-12">
+                                    <img src="../image/donor-list.png" alt="user_icon" class="w-14 h-12">
                                 </div>
                             </div>
                         </a>
@@ -25,7 +25,7 @@
                                     <p class="text-[#1E3A8A] text-3xl font-semibold mt-2">$donation_num_rows</p>
                                 </div>
                                 <div>
-                                    <img src="../image/office-man.png" alt="user_icon" class="w-14 h-12">
+                                    <img src="../image/hand.png" alt="user_icon" class="w-14 h-12">
                                 </div>
                             </div>
                         </a>
@@ -38,7 +38,7 @@
                                     <p class="text-[orange] text-3xl font-semibold mt-2">$approval_donor_num_rows</p>
                                 </div>
                                 <div>
-                                    <img src="../image/office-man.png" alt="user_icon" class="w-14 h-12">
+                                    <img src="../image/approval-list.png" alt="user_icon" class="w-14 h-12">
                                 </div>
                             </div>
                         </a>
@@ -51,7 +51,7 @@
                                     <p class="text-[#1E3A8A] text-3xl font-semibold mt-2">$user_num_rows</p>
                                 </div>
                                 <div>
-                                    <img src="../image/office-man.png" alt="user_icon" class="w-14 h-12">
+                                    <img src="../image/customer.png" alt="user_icon" class="w-14 h-12">
                                 </div>
                             </div>
                         </a>
@@ -67,7 +67,7 @@
                                     <p class="text-[#1E3A8A] text-3xl font-semibold mt-2">Check</p>
                                 </div>
                                 <div>
-                                    <img src="../image/office-man.png" alt="user_icon" class="w-14 h-12">
+                                    <img src="../image/verified.png" alt="user_icon" class="w-14 h-12">
                                 </div>
                             </div>
                         </a>
@@ -79,7 +79,7 @@
                                     <p class="text-[#1E3A8A] text-3xl font-semibold mt-2">$session_donation_num_rows</p>
                                 </div>
                                 <div>
-                                    <img src="../image/office-man.png" alt="user_icon" class="w-14 h-12">
+                                    <img src="../image/blood-bag.png" alt="user_icon" class="w-14 h-12">
                                 </div>
                             </div>
                         </a>

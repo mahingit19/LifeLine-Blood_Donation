@@ -146,6 +146,7 @@
                             (FAQs)</a></li>
                     <li><a href="?page=about" class="hover:underline">About Us</a></li>
                     <li><a href="?page=contact" class="hover:underline">Contact Us</a></li>
+                    <li><a href="?page=team" class="hover:underline">Our Team</a></li>
                 </ul>
             </div>
 

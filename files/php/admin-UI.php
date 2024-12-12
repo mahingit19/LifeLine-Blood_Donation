@@ -161,7 +161,7 @@
                 <section class="bg-[#F3F4F6] h-screen mt-6">
                     <h1 class="md:flex items-center gap-4 px-4 pt-4 lg:text-2xl font-semibold">Welcome To The Dashboard
                         <span>
-                            <img src="../image/flower.gif" alt="flower_logo" class="w-10 rounded-full">
+                            <img src="../image/dashboard.gif" alt="flower_logo" class="w-10 rounded-sm">
                         </span>
                     </h1>
 

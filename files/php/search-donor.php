@@ -68,7 +68,7 @@ else{
                     EOT;
                     if ($array['donor_photo'] == "" || $array['donor_photo'] == "uploads/"){
                         echo <<<EOT
-                        <img src="files/image/user.jpg" alt="user_profile" class="h-28 w-28 rounded-md">
+                        <img src="files/image/blood-donation.png" alt="user_profile" class="h-28 w-28 rounded-md">
                         EOT;
                     }
                     else {

@@ -48,26 +48,29 @@ $page = 'admin-dash';
         if ($page=='admin-dash'){
             include "admin-dash.php"; 
         }
-        if ($page=='admin-profile'){
+        else if ($page=='admin-profile'){
             include "admin-profile.php"; 
         }
-        if ($page=='admin-donor-list' && $user_type=='user'){
+        else if ($page=='admin-donor-list' && $user_type=='user'){
             include "admin-donor-list.php"; 
         }
-        if ($page=='admin-add-new-donor' && $user_type=='user'){
+        else if ($page=='admin-add-new-donor' && $user_type=='user'){
             include "admin-add-new-donor.php"; 
         }
-        if ($page=='admin-approve' && $user_type=='user'){
+        else if ($page=='admin-approve' && $user_type=='user'){
             include "admin-approve.php"; 
         }
-        if ($page=='admin-donation-list' && ($user_type=='user' || $user_type=='donor')){
+        else if ($page=='admin-donation-list' && ($user_type=='user' || $user_type=='donor')){
             include "admin-donation-list.php"; 
         }
-        if ($page=='admin-user-list' && $user_type=='user'){
+        else if ($page=='admin-user-list' && $user_type=='user'){
             include "admin-user-list.php"; 
         }
-        if ($page=='admin-update-form'){
+        else if ($page=='admin-update-form'){
             include "admin-update-form.php"; 
+        }
+        else {
+            include "error.php";
         }
     }
 

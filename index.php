@@ -70,41 +70,47 @@ session_start();
         if ($page=='home'){
             include "files/php/homepage.php"; 
         }
-        if ($page=='about'){
+        else if ($page=='about'){
             include "files/php/about.php"; 
         }
-        if ($page=='search-donor'){
+        else if ($page=='search-donor'){
             include "files/php/search-donor.php"; 
         }
-        if ($page=='register'){
+        else if ($page=='register'){
             include "files/php/register.php"; 
         }
-        if ($page=='login-page'){
+        else if ($page=='login-page'){
             include "files/php/login-page.php"; 
         }
-        if ($page=='faqs'){
+        else if ($page=='faqs'){
             include "files/php/faqs.php"; 
         }
-        if ($page=='different-blood-group'){
+        else if ($page=='different-blood-group'){
             include "files/php/faqs/different-blood-group.php"; 
         }
-        if ($page=='different-blood-term'){
+        else if ($page=='different-blood-term'){
             include "files/php/faqs/different-blood-term.php"; 
         }
-        if ($page=='how-often-can-i-donate-blood'){
+        else if ($page=='how-often-can-i-donate-blood'){
             include "files/php/faqs/how-often-can-i-donate-blood.php"; 
         }
-        if ($page=='what-is-blood'){
+        else if ($page=='what-is-blood'){
             include "files/php/faqs/what-is-blood.php"; 
         }
-        if ($page=='what-is-blood-donation'){
+        else if ($page=='what-is-blood-donation'){
             include "files/php/faqs/what-is-blood-donation.php"; 
         }
-        if ($page=='who-can-donate-blood'){
+        else if ($page=='who-can-donate-blood'){
             include "files/php/faqs/who-can-donate-blood.php"; 
         }
-        if ($page=='contact'){
+        else if ($page=='contact'){
             include "files/php/contact.php"; 
+        }
+        else if ($page=='team'){
+            include "files/php/team.php"; 
+        }
+        else {
+            include "files/php/error.php";
         }
     }
     
