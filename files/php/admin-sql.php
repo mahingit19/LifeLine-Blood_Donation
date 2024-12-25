@@ -44,6 +44,15 @@ if ($user_type == "donor"){
     $session_donation_num_rows = mysqli_num_rows($session_donation_query);
 }
 
+if ($user_type == "donor"){
+    $last_donation_sql = "SELECT $donation_table.donation_id, $donation_table.donation_date, $donor_table.donor_id,  $donor_table.donor_name
+                FROM $donation_table
+                INNER JOIN $donor_table ON $donation_table.donor_id=$donor_table.donor_id  WHERE $donation_table.donor_id='$session_array[donor_id]' ORDER BY $donation_table.donation_id DESC LIMIT 1;";
+    $last_donation_query = mysqli_query($connect,$last_donation_sql);
+    $last_donation_num_rows = mysqli_num_rows($last_donation_query);
+    $last_donation_fetch = mysqli_fetch_assoc($last_donation_query);
+}
+
 $user_sql = "SELECT * FROM $dbname"."_user_list";
 $user_query = mysqli_query($connect,$user_sql);
 $user_num_rows = mysqli_num_rows($user_query);

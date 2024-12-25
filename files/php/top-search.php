@@ -11,7 +11,7 @@
                         <select class="select select-bordered w-full mt-1 font-semibold text-sm lg:text-base" name="blood">
                             <?php
                             if ($blood != ''){
-                                echo "<option selected>$blood</option>";
+                                echo "<option value='$blood' selected>Selected: $blood</option>";
                             }
                             else{
                                 echo "<option disabled selected>Select</option>";
@@ -32,7 +32,7 @@
                         <select class="select select-bordered w-full mt-1 font-semibold text-sm lg:text-base" name="location">
                         <?php
                             if ($location != ''){
-                                echo "<option selected>$location</option>";
+                                echo "<option value='$location' selected>Selected: $location</option>";
                             }
                             else{
                                 echo "<option disabled selected>Select</option>";
@@ -113,14 +113,7 @@
                     <div>
                         <label class="font-medium">Donor Type</label><br>
                         <select class="select select-bordered w-full mt-1 font-semibold text-sm lg:text-base" name="type">
-                        <?php
-                            if ($type != ''){
-                                echo "<option selected>$type</option>";
-                            }
-                            else{
-                                echo "<option disabled selected>Select</option>";
-                            }
-                            ?>
+                            <option disabled selected>Select</option>
                             <option>All</option>
                             <option>Eligible</option>
                         </select>

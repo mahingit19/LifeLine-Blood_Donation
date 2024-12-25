@@ -5,7 +5,7 @@ include "db_connect.php";
 $create_db = "CREATE DATABASE $dbname";
 mysqli_query($connect, $create_db);
 
-echo "$dbname created <br>";
+echo "<span style='display: block; padding: 10px; font-size: 24px; background-color: lightgreen; color: black;'><b>$dbname</b> created successfully!</span>";
 
 include "db_select.php";
 
@@ -50,5 +50,8 @@ $create_tb .= "CREATE TABLE ".$dbname."_user_list(
 
 mysqli_multi_query($connect, $create_tb);
 
-echo "table created successfully";
+echo "<span style='display: block; padding: 10px; font-size: 24px; background-color: lightgreen; color: black;'><b>Tables</b> created successfully!</span>";
+
+echo "<span style='display: block; padding: 10px; font-size: 24px; background-color: lightgreen; color: black;'><button style='padding: 10px; width: 20%; cursor: pointer;' onclick='history.back()'>Go Back!</button></span>";
+
 ?>

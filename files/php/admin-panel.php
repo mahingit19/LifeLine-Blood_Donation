@@ -30,51 +30,60 @@ include "admin-sql.php";
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            background-color: white;
+        }
+        .myWrapper{
+            width: 100%;
+            height: min-content;
+            box-sizing: border-box;
         }
     </style>
 </head>
 
 <body>
+    <div class="myWrapper">
+        <?php
 
-<?php
+        include "admin-UI.php";
 
-include "admin-UI.php";
+        $page = 'admin-dash';
+            if (isset($_GET['page'])){
+                $page = $_GET['page'];
+            }
+            if (isset($page)){
+                if ($page=='admin-dash'){
+                    include "admin-dash.php"; 
+                }
+                else if ($page=='admin-profile'){
+                    include "admin-profile.php"; 
+                }
+                else if ($page=='admin-donor-list' && $user_type=='user'){
+                    include "admin-donor-list.php"; 
+                }
+                else if ($page=='admin-add-new-donor' && $user_type=='user'){
+                    include "admin-add-new-donor.php"; 
+                }
+                else if ($page=='admin-approve' && $user_type=='user'){
+                    include "admin-approve.php"; 
+                }
+                else if ($page=='admin-donation-list' && ($user_type=='user' || $user_type=='donor')){
+                    include "admin-donation-list.php"; 
+                }
+                else if ($page=='admin-user-list' && $user_type=='user'){
+                    include "admin-user-list.php"; 
+                }
+                else if ($page=='admin-update-form'){
+                    include "admin-update-form.php"; 
+                }
+                else {
+                    include "error.php";
+                }
+            }
 
-$page = 'admin-dash';
-    if (isset($_GET['page'])){
-        $page = $_GET['page'];
-    }
-    if (isset($page)){
-        if ($page=='admin-dash'){
-            include "admin-dash.php"; 
-        }
-        else if ($page=='admin-profile'){
-            include "admin-profile.php"; 
-        }
-        else if ($page=='admin-donor-list' && $user_type=='user'){
-            include "admin-donor-list.php"; 
-        }
-        else if ($page=='admin-add-new-donor' && $user_type=='user'){
-            include "admin-add-new-donor.php"; 
-        }
-        else if ($page=='admin-approve' && $user_type=='user'){
-            include "admin-approve.php"; 
-        }
-        else if ($page=='admin-donation-list' && ($user_type=='user' || $user_type=='donor')){
-            include "admin-donation-list.php"; 
-        }
-        else if ($page=='admin-user-list' && $user_type=='user'){
-            include "admin-user-list.php"; 
-        }
-        else if ($page=='admin-update-form'){
-            include "admin-update-form.php"; 
-        }
-        else {
-            include "error.php";
-        }
-    }
+        ?>
+    </div>
 
-?>
+
 
 </body>
 

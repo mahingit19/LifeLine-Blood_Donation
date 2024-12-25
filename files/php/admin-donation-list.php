@@ -4,18 +4,55 @@
                         <div class="flex items-center justify-between mb-4">
                         <h2 class="text-xl md:text-2xl font-bold mb-4">Total Donation List</h2>
                         <?php
+
                         if ($user_type == "donor"){
-                            $current_date = date("j-M-Y");
-                            echo <<<EOT
-                            <form action="submit.php" method="post">
-                            <input type="hidden" name="donor_id" value="$session_array[donor_id]">
-                            <input type="hidden" name="donation_date" value="$current_date">
-                            <button type="submit" name="donation" value="true" 
-                            onclick="return confirm('Are you sure donated? Careful before submitting!');"
-                                        class="bg-blue-500 text-white px-4 py-2 font-medium rounded-md transition duration-500 ease-in-out hover:bg-black shadow-2xl">(+) Add
-                                        donation</button>
-                            </form>
-                            EOT;
+
+                            $today = date("j-M-Y");
+                            $current_date = date_create("$today");
+
+                            if ($last_donation_num_rows > 0){
+                                $last_donation_date = date_create("$last_donation_fetch[donation_date]");
+                            
+                                $next_donation_date = date_add($last_donation_date,date_interval_create_from_date_string("90 days"));
+                                $date_diff = date_diff($next_donation_date,$current_date);
+                                $remain_days = $date_diff->format("%R%a");
+                                if ($remain_days < 0){
+                                    echo "<p style='color: red;'>".mb_substr($remain_days,1)." days remaining before donation</p>";
+                                    echo <<<EOT
+                                    <button class="bg-gray-500 text-white px-4 py-2 font-medium rounded-md cursor-not-allowed">
+                                        (+) Add donation
+                                    </button>
+                                    EOT;
+                                }
+                                else if ($remain_days == 0 || $remain_days > 0){
+                                    echo "<p style='color: green;'>You can donate now</p>";
+                                    echo <<<EOT
+                                    <form action="submit.php" method="post">
+                                    <input type="hidden" name="donor_id" value="$session_array[donor_id]">
+                                    <input type="hidden" name="donation_date" value="$today">
+                                    <button type="submit" name="donation" value="true" 
+                                    onclick="return confirm('Are you sure donated? Careful before submitting!');"
+                                                class="bg-blue-500 text-white px-4 py-2 font-medium rounded-md transition duration-500 ease-in-out hover:bg-black shadow-2xl">(+) Add
+                                                donation</button>
+                                    </form>
+                                    EOT;
+                                }
+                                else{
+                                    echo "Something went wrong!";
+                                }
+                            }
+                            else{
+                                echo <<<EOT
+                                <form action="submit.php" method="post">
+                                <input type="hidden" name="donor_id" value="$session_array[donor_id]">
+                                <input type="hidden" name="donation_date" value="$today">
+                                <button type="submit" name="donation" value="true" 
+                                onclick="return confirm('Are you sure donated? Careful before submitting!');"
+                                            class="bg-blue-500 text-white px-4 py-2 font-medium rounded-md transition duration-500 ease-in-out hover:bg-black shadow-2xl">(+) Add
+                                            donation</button>
+                                </form>
+                                EOT;
+                            }
                         }
                         ?>
 
